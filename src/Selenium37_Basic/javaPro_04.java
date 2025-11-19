@@ -14,6 +14,7 @@ public class javaPro_04 {
 		WebElement element = driver.findElement(By.name("q"));
 		element.sendKeys("Kodnest");
 		WebElement link = driver.findElement(By.linkText("onlytestingblog"));
-		link.clear();
+		link.click();
+		
 	}
 }
