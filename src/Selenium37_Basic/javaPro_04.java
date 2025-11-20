@@ -15,8 +15,11 @@ public class javaPro_04 {
 //			WebElement element = driver.findElement(By.name("q"));
 //			Thread.sleep(5000);
 //			element.sendKeys("Kodnest");
-			WebElement link = driver.findElement(By.linkText("onlytestingblog"));
-			link.click(); 
+//			WebElement link = driver.findElement(By.linkText("onlytestingblog"));
+//			link.click(); 
+			
+			Thread.sleep(5000);
+			driver.findElement(By.id("textbox1")).clear();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
