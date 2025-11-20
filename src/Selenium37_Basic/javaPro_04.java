@@ -18,8 +18,19 @@ public class javaPro_04 {
 //			WebElement link = driver.findElement(By.linkText("onlytestingblog"));
 //			link.click(); 
 			
+			// Clear method
 			Thread.sleep(5000);
 			driver.findElement(By.id("textbox1")).clear();
+			
+			// For getting the text like any line
+			Thread.sleep(5000);
+			String str = driver.findElement(By.id("pah")).getText();
+			System.out.println(str);
+			
+			// getTitle method which will return title of the page
+			Thread.sleep(5000);
+			String title = driver.getTitle();
+			System.out.println(title);
 		}
 		catch(Exception e) {
 			e.printStackTrace();
