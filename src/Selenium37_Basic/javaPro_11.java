@@ -19,9 +19,18 @@ public class javaPro_11 {
 			driver.findElement(By.linkText("Open a popup window")).click();
 			Set<String> windows = driver.getWindowHandles();
 			Iterator<String> itr = windows.iterator();
-			while(itr.hasNext()) {
-				System.out.println(itr.next());
-			}
+			
+			// switchTo()
+			System.out.println("------------------------------------");
+			String mainWin = itr.next();
+			String childWin = itr.next();
+			driver.switchTo().window(childWin);
+			Thread.sleep(5000);
+			driver.switchTo().window(mainWin);
+			Thread.sleep(5000);
+//			String text = driver.findElement(By.xpath("//body/h2")).getText();        // Error
+//			System.out.println(text);
+			driver.quit();
 			
 		}
 		catch(Exception e) {
