@@ -12,6 +12,7 @@ public class javaPro_04 {
 			WebDriver driver= new ChromeDriver();
 			driver.get("https://iamsandesh23.github.io/selenium.github.io/");
 			driver.manage().window().maximize();
+			
 //			WebElement element = driver.findElement(By.name("q"));
 //			Thread.sleep(5000);
 //			element.sendKeys("Kodnest");
@@ -19,18 +20,32 @@ public class javaPro_04 {
 //			link.click(); 
 			
 			// Clear method
-			Thread.sleep(5000);
-			driver.findElement(By.id("textbox1")).clear();
+//			Thread.sleep(5000);
+//			driver.findElement(By.id("textbox1")).clear();
+//			
+//			// For getting the text like any line
+//			Thread.sleep(5000);
+//			String str = driver.findElement(By.id("pah")).getText();
+//			System.out.println(str);
+//			
+//			// getTitle method which will return title of the page
+//			Thread.sleep(5000);
+//			String title = driver.getTitle();
+//			System.out.println(title);
 			
-			// For getting the text like any line
-			Thread.sleep(5000);
-			String str = driver.findElement(By.id("pah")).getText();
-			System.out.println(str);
+			// getCurrent URL - 09
+			driver.findElement(By.linkText("onlytestingblog")).click();
+			String url = driver.getCurrentUrl();
+			System.out.println(url);
 			
-			// getTitle method which will return title of the page
+			// close() method
 			Thread.sleep(5000);
-			String title = driver.getTitle();
-			System.out.println(title);
+			driver.close();
+			
+			// quit() method
+			driver.findElement(By.partialLinkText("jquery")).click();
+			Thread.sleep(5000);
+			driver.quit();
 		}
 		catch(Exception e) {
 			e.printStackTrace();
