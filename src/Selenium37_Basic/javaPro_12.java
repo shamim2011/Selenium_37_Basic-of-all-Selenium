@@ -7,7 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
-public class javaPro_11 {
+public class javaPro_12 {
+
 	public static void main(String[] args) {
 		try {
 			WebDriver driver= new ChromeDriver();
@@ -23,13 +24,12 @@ public class javaPro_11 {
 			System.out.println("------------------------------------");
 			String mainWin = itr.next();
 			String childWin = itr.next();
-			driver.switchTo().window(mainWin);
-			Thread.sleep(5000);
 			driver.switchTo().window(childWin);
 			Thread.sleep(5000);
-			String text = driver.findElement(By.xpath("//h1[text()='Not found']")).getText();
-			System.out.println(text);
+			driver.switchTo().window(mainWin);
+			Thread.sleep(5000);
 			driver.quit();
+			
 		}
 		catch(Exception e) {
 			e.printStackTrace();
