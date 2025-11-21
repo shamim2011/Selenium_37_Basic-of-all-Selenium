@@ -28,9 +28,9 @@ public class javaPro_12 {
 		
 		
 		WebDriver driver= new ChromeDriver();
-		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		driver.get("https://iamsandesh23.github.io/selenium.github.io/");
 		driver.manage().window().maximize();
+		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
 		
 		
 		/// implicit wait -  driver.manage().timeouts().implicitlyWait(5,TimeUnit.SECONDS);
