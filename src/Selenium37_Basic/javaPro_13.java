@@ -26,12 +26,27 @@ public class javaPro_13 {
 		
 		// Handling drop-down and Multi-Selection
 //		driver.findElement(By.id("drop1")).sendKeys("doc 3");
+//		
+//		WebElement dropdownField = driver.findElement(By.id("drop1"));
+//		Select select = new Select(dropdownField);
 		
-		WebElement dropdownField = driver.findElement(By.id("drop1"));
-		Select select = new Select(dropdownField);
+		
 //		select.selectByVisibleText("doc 3");   // instead of sendKeys()
 //		select.selectByIndex(3);   // instead of sendKeys()
 //		select.deselectByVisibleText("doc3");
+		
+		
+		//  Handling drop-down and Multi-Selection
+		
+		WebElement multiSelField = driver.findElement(By.id("multiselect1"));
+		Select select = new Select(multiSelField);
+//		select.selectByIndex(3);
+//		select.selectByIndex(0);
+		// instead of the above two lines
+		select.selectByVisibleText("Volvo");
+		select.selectByVisibleText("Audi");
+		Thread.sleep(5000);
+		select.deselectByVisibleText("Volvo");   // delete the selecting text
 		System.out.println("------------------------------------");
 
 	}
